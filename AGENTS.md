@@ -48,8 +48,18 @@
 1.  **Atomic Commits**: Un cambio lógico = Un commit.
 2.  **Linting**: ESLint + Prettier obligatorios (`npm run lint` antes de push).
 3.  **Documentation**: Cada feature nueva actualiza este archivo.
+4.  **Conventional Commits**: Obligatorio usar prefijos estándar (`feat:`, `fix:`, `chore:`) para alimentar el changelog automático.
 
-## 6. Community & Resources
+## 6. CI/CD Pipeline (Automated)
+*   **Provider**: GitHub Actions.
+*   **Trigger**: Push to `master`.
+*   **Tools**:
+    *   `release-it`: Gestión de versiones y git tags.
+    *   `auto-changelog`: Generación de historial de cambios.
+*   **Stages**:
+    *   `Lint & Test` → `Release` → `Build` → `Deploy (GitHub Pages)`.
+
+## 7. Community & Resources
 *   **Discord**: [Unirse a la Comunidad](https://discord.gg/TCuZSnfKTE) (Hub central de coordinación).
 *   **GitHub**: Repositorio principal para código y issues.
 
