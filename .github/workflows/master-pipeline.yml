@@ -55,7 +55,7 @@ jobs:
 
             # No GitHub Pages artifact upload since Astro static output needs explicit config or specific folder.
             # Assuming 'dist' matches build output.
-            
+
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
