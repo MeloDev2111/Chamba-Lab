@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4F46E5;
+  /* Deep Indigo */
+  --color-secondary: #1E293B;
+  /* Slate Blue */
+  --color-accent: #10B981;
+  /* Emerald */
+  --color-surface: #F8FAFC;
+  /* Light Slate */
+  --color-content: #0F172A;
+  /* Slate 900 */
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", sans-serif;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-accent));
+  }
+}
+
+html,
+body,
+:root {
+  background-color: white;
+  color: var(--color-content);
+  font-family: var(--font-sans);
+  height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  html,
+  body,
+  :root {
+    background-color: #0F172A;
+    /* Slate 900 */
+    color: #F1F5F9;
+    /* Slate 100 */
+  }
+}
